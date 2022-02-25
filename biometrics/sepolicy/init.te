@@ -1,1 +1,1 @@
-get_prop(init, vendor_fingerprint_prop);
+get_prop(vendor_init, vendor_fingerprint_prop);
