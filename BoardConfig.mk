@@ -5,7 +5,7 @@
 #
 
 # Inherit from common mititanium-common
-include device/xiaomi/mititanium-common/BoardConfigCommon.mk
+include device/xiaomi/msm8953-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/vince
 TITANIUM_PREBUILT := device/xiaomi/titanium-prebuilt
