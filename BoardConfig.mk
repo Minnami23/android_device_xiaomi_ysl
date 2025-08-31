@@ -8,12 +8,14 @@
 include device/xiaomi/mititanium-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/vince
+TITANIUM_PREBUILT := device/xiaomi/titanium-prebuilt
 
 # Display
 TARGET_SCREEN_DENSITY := 440
 
 # Kernel
-TARGET_KERNEL_CONFIG := vendor/vince_defconfig
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_PREBUILT_KERNEL := $(TITANIUM_PREBUILT)/kernel/vince/Image.gz-dtb
 
 # Filesystem
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
