@@ -15,6 +15,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from vince device
 $(call inherit-product, device/xiaomi/vince/device.mk)
 
+# More Flags
+TARGET_BUILD_LAWNCHAIR := true
+TARGET_BUILD_VIPER4FX := true
+TARGET_BUILD_SUKISU := true
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
 PRODUCT_NAME := lineage_vince
