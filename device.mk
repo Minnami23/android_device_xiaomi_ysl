@@ -18,8 +18,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_mtp.xml
+    $(call find-copy-subdir-files,*,$(TITANIUM_PREBUILT)/audio/vince/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Camera
 PRODUCT_PACKAGES += \
