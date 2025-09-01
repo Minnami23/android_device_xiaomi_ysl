@@ -14,8 +14,16 @@ TITANIUM_PREBUILT := device/xiaomi/titanium-prebuilt
 TARGET_SCREEN_DENSITY := 440
 
 # Kernel
+TARGET_FORCE_PREBUILT_KERNEL := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_PREBUILT_KERNEL := $(TITANIUM_PREBUILT)/kernel/vince/Image.gz-dtb
+
+# Kernel source option
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
+TARGET_KERNEL_CONFIG := vince-perf_defconfig
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
 
 # Filesystem
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
