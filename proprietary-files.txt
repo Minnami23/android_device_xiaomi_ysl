@@ -1,4 +1,12 @@
-# Not appended blobs from vince-user 8.1.0 OPM1.171019.019 V11.0.2.0.OEGMIXM release-keys
+# Not appended blobs from vince-user 8.1.0 OPM1.171019.019 V11.0.3.0.OEGCNXM release-keys
+# daisy Package version: daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
+# PAN Package version: Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys
+# olive (Pie) Package version: olive-user 9 PKQ1.190319.001 V11.0.11.0.PCNMIXM release-keys
+# FP3 Package version: Fairphone/FP3/FP3:11/8901.4.A.0010/gms-f74c58a8:user/release-keys
+
+# ADSP modules - Dirac - from daisy
+vendor/lib/rfsa/adsp/dirac_resource.dar
+vendor/lib/rfsa/adsp/libdirac-capiv2.so
 
 # Audio ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -11,8 +19,10 @@ vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
 
-# Audio firmware
-system/etc/firmware/tas2557_uCDSP.bin:vendor/firmware/tas2557_uCDSP.bin
+# Audio dirac - from mido
+vendor/etc/diracmobile.config
+vendor/lib/soundfx/libdirac.so
+vendor/lib/libDiracAPI_SHARED.so
 
 # Camera
 lib/libtrueportrait.so:vendor/lib/libtrueportrait.so
@@ -318,20 +328,14 @@ vendor/lib/libmmcamera_vince_ov5675_ofilm_eeprom.so
 vendor/lib/libmmcamera_vince_ov5675_qtech.so
 vendor/lib/libmmcamera_vince_ov5675_qtech_eeprom.so
 
-# Consumer IR
-vendor/lib64/hw/consumerir.default.so
+# Charger - from daisy
+vendor/bin/hvdcp_opti
 
-# Fingerprint (HIDL)
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
+# Consumer IR
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.msm8953.so
 
 # Fingerprint (FPC)
-vendor/lib64/hw/fingerprint.default.so
-
-# Fingerprint (Extension)
--vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
-vendor/etc/permissions/com.fingerprints.extension.xml
-vendor/framework/com.fingerprints.extension.jar
+vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8953.so
 vendor/lib64/com.fingerprints.extension@1.0.so
 
 # Fingerprint (Goodix)
@@ -340,21 +344,52 @@ lib64/libgf_algo.so:vendor/lib64/libgf_algo.so
 lib64/libgf_ca.so:vendor/lib64/libgf_ca.so
 lib64/libgf_hal.so:vendor/lib64/libgf_hal.so
 
-# Fingerprint (Goodix HAL) - from daisy-user 10 QKQ1.191002.002 V11.0.18.0.QDLMIXM release-keys
+# Fingerprint (Goodix HAL) - from daisy
 vendor/lib64/hw/gf_fingerprint.default.so
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
 
-# Gatekeeper - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
-vendor/lib/hw/gatekeeper.msm8953.so|cd04140788659ae07a50081baeb3eb2e42f37028
-vendor/lib64/hw/gatekeeper.msm8953.so|1086e5dcda7aa2bed7ac015f7850095f6199a1c2
+# Firmware (Audio)
+etc/firmware/tas2557_uCDSP.bin:vendor/firmware/tas2557_uCDSP.bin
 
-# Keystore - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
-vendor/lib/hw/keystore.msm8953.so|c56d3768e04fc180d844dbca94be8c27770e37d5
-vendor/lib64/hw/keystore.msm8953.so|9660e1c13a3589114cf18db58e5b3c3c9e14059b
+# Firmware (GPU) - from daisy
+vendor/firmware/a506_zap.b00
+vendor/firmware/a506_zap.b01
+vendor/firmware/a506_zap.b02
+vendor/firmware/a506_zap.mdt
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
+
+# Firmware (Touchscreen)
+etc/firmware/novatek_ts_fw.bin:vendor/firmware/novatek_ts_fw.bin
+
+# Gatekeeper - from FP3
+vendor/lib64/hw/gatekeeper.msm8953.so
+
+# IMS (uceService) - from olive (Pie)
+-system/app/uceShimService/uceShimService.apk:system_ext/app/uceShimService/uceShimService.apk
+system/framework/com.qualcomm.qti.uceservice-V2.0-java.jar:system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar
+system/lib64/com.qualcomm.qti.uceservice@2.0.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
+
+# Keystore - from FP3
+vendor/lib64/hw/keystore.msm8953.so
+
+# Perf configs - from FP3
+vendor/etc/perf/commonresourceconfigs.xml
+vendor/etc/perf/commonsysnodesconfigs.xml
+vendor/etc/perf/perfboostsconfig.xml
+vendor/etc/perf/perfconfigstore.xml
+vendor/etc/perf/targetconfig.xml
+vendor/etc/perf/targetresourceconfigs.xml
+
+# Sensors - from LA.UM.9.6.3.r1-06200-89xx.0
+vendor/bin/sensors.qti
+vendor/lib/libsensor1.so
+vendor/lib64/libsensor1.so
+
+# Sensors (SSC) - from daisy
+vendor/lib64/libsensor_reg.so
+vendor/lib64/sensors.ssc.so
 
 # Sensors configs
 vendor/etc/sensors/sensor_def_qcomdev.conf
-
-# Touchscreen firmware
-etc/firmware/novatek_ts_fw.bin:vendor/firmware/novatek_ts_fw.bin
