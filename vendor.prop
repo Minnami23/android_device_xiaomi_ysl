@@ -1,5 +1,20 @@
-# Audio
+# Xiaomi vince - Audio fluence
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicecomm=false
 persist.vendor.audio.fluence.voicerec=false
-ro.vendor.audio.sdk.fluencetype=fluence
+ro.vendor.audio.sdk.fluencetype=none
+vendor.audio.feature.fluence.enable=false
+
+# Xiaomi vince - Camera
+persist.camera.HAL3.enabled=1
+
+# Xiaomi vince - Bluetooth
+bluetooth.sco.disable_enhanced_connection=1
+
+# Xiaomi vince - Encryption
+ro.crypto.volume.contents_mode=aes-256-xts
+
+# Xiaomi vince - SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=MSM8953
