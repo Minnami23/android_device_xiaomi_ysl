@@ -1,0 +1,43 @@
+# Not appended blobs from vince-user 8.1.0 OPM1.171019.019 V11.0.3.0.OEGCNXM release-keys
+# daisy Package version: daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
+# PAN Package version: Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys
+# olive (Pie) Package version: olive-user 9 PKQ1.190319.001 V11.0.11.0.PCNMIXM release-keys
+# FP3 Package version: Fairphone/FP3/FP3:11/8901.4.A.0010/gms-f74c58a8:user/release-keys
+
+# Audio ACDB
+vendor/etc/acdbdata/adsp_avs_config.acdb
+vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
+
+# Consumer IR
+-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.msm8953.so;DISABLE_DEPS
+
+# Fingerprint (FPC)
+-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8953.so;DISABLE_DEPS
+-vendor/lib64/com.fingerprints.extension@1.0.so;DISABLE_DEPS
+
+# Fingerprint (Goodix)
+etc/firmware/goodix_firmware.bin:vendor/firmware/goodix_firmware.bin
+-lib64/libgf_algo.so:vendor/lib64/libgf_algo.so;DISABLE_DEPS
+-lib64/libgf_ca.so:vendor/lib64/libgf_ca.so;DISABLE_DEPS
+-lib64/libgf_hal.so:vendor/lib64/libgf_hal.so;DISABLE_DEPS
+
+# Fingerprint (Goodix HAL) - from daisy
+-vendor/lib64/hw/gf_fingerprint.default.so;DISABLE_DEPS
+-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so;DISABLE_DEPS
+-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so;DISABLE_DEPS
+
+# Firmware (Audio)
+etc/firmware/tas2557_uCDSP.bin:vendor/firmware/tas2557_uCDSP.bin
+
+# Firmware (Touchscreen)
+etc/firmware/novatek_ts_fw.bin:vendor/firmware/novatek_ts_fw.bin
+
+# Sensors configs
+vendor/etc/sensors/sensor_def_qcomdev.conf
