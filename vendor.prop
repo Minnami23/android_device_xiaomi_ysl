@@ -10,7 +10,7 @@ vendor.audio.feature.fluence.enable=false
 persist.camera.HAL3.enabled=1
 
 # Xiaomi vince - Bluetooth
-bluetooth.sco.disable_enhanced_connection=1
+bluetooth.sco.disable_enhanced_connection=true
 
 # Xiaomi vince - Encryption
 ro.crypto.volume.contents_mode=aes-256-xts
