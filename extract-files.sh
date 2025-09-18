@@ -25,7 +25,7 @@ fi
 
 set -e
 
-export DEVICE=vince
+export DEVICE=ysl
 export DEVICE_COMMON=mithorium-common
 export VENDOR=xiaomi
 

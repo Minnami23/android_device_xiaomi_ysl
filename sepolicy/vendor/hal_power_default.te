@@ -1,2 +1,0 @@
-# DT2W
-allow hal_power_default sysfs_ts:file rw_file_perms;

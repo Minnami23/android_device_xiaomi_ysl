@@ -5,13 +5,13 @@
 #
 
 # Partitions
-BOARD_VENDORIMAGE_PARTITION_SIZE := 872415232
+BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Inherit from common mithorium-common
 include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/vince
+DEVICE_PATH := device/xiaomi/ysl
 
 # Display
 TARGET_SCREEN_DENSITY := 440
@@ -20,8 +20,8 @@ TARGET_SCREEN_DENSITY := 440
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
-TARGET_KERNEL_CONFIG := vince-perf_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/vince
+TARGET_KERNEL_CONFIG := ysl-perf_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -30,9 +30,6 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 55087422464
-
-# Power
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0020/input/input1/wake_gesture"
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
@@ -48,4 +45,4 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
 
 # Inherit from the proprietary version
-include vendor/xiaomi/vince/BoardConfigVendor.mk
+include vendor/xiaomi/ysl/BoardConfigVendor.mk

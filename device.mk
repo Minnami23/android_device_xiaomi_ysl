@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Display
-TARGET_USES_Q_DISPLAY_STACK := true
-
 # Platform
 TARGET_BOARD_PLATFORM := msm8953
 
@@ -37,10 +34,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     camera.msm8953
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_vince
-
 PRODUCT_PACKAGES += \
     liblzma.vendor:64
 
@@ -53,7 +46,7 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/vince/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti
+    vendor/xiaomi/ysl/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -68,4 +61,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/vince/vince-vendor.mk)
+$(call inherit-product, vendor/xiaomi/ysl/ysl-vendor.mk)
