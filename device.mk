@@ -37,6 +37,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     liblzma.vendor:64
 
+# Fingerprint
+$(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,RUN_32BIT,true)
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
@@ -52,13 +55,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.xiaomi.device.rc
 
-# VNDK
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/xiaomi
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/ysl/ysl-vendor.mk)
