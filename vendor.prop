@@ -8,6 +8,8 @@ vendor.audio.feature.fluence.enable=false
 
 # Xiaomi ysl - Camera
 persist.camera.HAL3.enabled=1
+persist.vendor.camera.dual.camera=0
+persist.vendor.camera.aux.camera=1
 
 # Xiaomi ysl - Bluetooth
 bluetooth.sco.disable_enhanced_connection=true
