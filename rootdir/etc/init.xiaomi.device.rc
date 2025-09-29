@@ -1,7 +1,3 @@
-# ADSP
-on boot
-    stop vendor.adsprpcd
-
 # UClamp tunings
 on boot
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 96
