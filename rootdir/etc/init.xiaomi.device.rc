@@ -1,3 +1,7 @@
+# IR
+on boot
+    chown system system /dev/spidev5.1 
+
 # UClamp tunings
 on boot
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 96
