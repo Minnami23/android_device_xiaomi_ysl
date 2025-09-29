@@ -37,12 +37,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     liblzma.vendor:64
 
-# Fingerprint
-$(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,RUN_32BIT,true)
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
-
 # Input
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/)

@@ -12,17 +12,34 @@
         <value>1958400</value>
         <value>2016000</value>
     </array>
-    <array name="cpu.core_power.cluster0">
-        <value>151</value>
-        <value>169</value>
-        <value>177</value>
-        <value>195</value>
-        <value>259</value>
-        <value>307</value>
-        <value>353</value>
+    <array name="cpu.active.cluster0">
+        <value>13</value>
+        <value>23</value>
+        <value>33</value>
+        <value>44</value>
+        <value>55</value>
+        <value>68</value>
+        <value>76</value>
     </array>
-    <item name="cpu.suspend">1.6</item>
-    <item name="cpu.idle">1.6</item>
-    <item name="battery.capacity">4000</item>
+    <item name="cpu.idle">4</item>
+    <item name="cpu.suspend">3</item>
+    <item name="battery.capacity">3080</item>
+    <item name="bluetooth.active">60</item>
+    <item name="bluetooth.at">2</item>
     <item name="bluetooth.controller.voltage">3300</item>
+    <item name="bluetooth.on">2</item>
+    <item name="wifi.on">1</item>
+    <item name="wifi.active">100</item>
+    <item name="wifi.scan">30</item>
+    <item name="audio">22</item>
+    <item name="video">80</item>
+    <item name="camera.flashlight">121</item>
+    <item name="camera.avg">400</item>
+    <item name="gps.on">100</item>
+    <item name="radio.active">50</item>
+    <item name="radio.scanning">60</item>
+    <array name="radio.on">
+        <value>8</value>
+        <value>6</value>
+    </array>
 </device>
