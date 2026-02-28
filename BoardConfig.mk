@@ -17,6 +17,7 @@ DEVICE_PATH := device/xiaomi/ysl
 TARGET_SCREEN_DENSITY := 260
 
 # HIDL
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest/gatekeeper.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
